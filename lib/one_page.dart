@@ -10,11 +10,7 @@ class OnePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const TwoPage(args: 'teste',),
-              ),
-            );
+            Navigator.of(context).pushReplacementNamed('/twoPage',arguments: '123').then((value) => print(value));
           },
           child: Text('Ir para proxima page'),
         ),
